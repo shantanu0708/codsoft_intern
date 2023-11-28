@@ -30,11 +30,12 @@ public class Number_game {
         return 0;
     }
     public static void main(String[] args){
+        int guess = 0, hsc = 0;
         Scanner sc1 = new Scanner(System.in);
-        while(sc1.hasNext()){
-        System.out.println("Options:\n1.number game\n2.Exit\nEnter the option:");
+        while(true){
+        System.out.println("Options:\n1.number game\n2.Score\n3.Exit\nEnter the option:");
         int opt = sc1.nextInt(); 
-        if(opt == 2){
+        if(opt == 3){
             break;
         }
         switch (opt) {
@@ -43,14 +44,20 @@ public class Number_game {
                 System.out.println("\t\tNumber Game");
                 System.out.println("*".repeat(45));
                 int num = 1 + (int) (Math.random() * 100);
-                int guess = Guessing_number(num);
-                System.out.println(guess);
+                guess = Guessing_number(num);
                 System.out.println("The original number is: "+num);
+                if(guess == 1){
+                    hsc = hsc + 100;
+                }
+                break;
+            case 2:
+                System.out.println("Your score is: "+ hsc);
                 break;
             default:
                 System.out.println("!!!Wrong Option!!!");
                 break;
         }
-    }   sc1.close();
+    }   
+    sc1.close();
     }
 }
