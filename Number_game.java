@@ -31,8 +31,7 @@ public class Number_game {
     }
     public static void main(String[] args){
         Scanner sc1 = new Scanner(System.in);
-        boolean playagain = true;
-        while (playagain){
+        while(sc1.hasNext()){
         System.out.println("Options:\n1.number game\n2.Exit\nEnter the option:");
         int opt = sc1.nextInt(); 
         if(opt == 2){
@@ -51,8 +50,7 @@ public class Number_game {
             default:
                 System.out.println("!!!Wrong Option!!!");
                 break;
-        } 
-        
-    }  sc1.close();
+        }
+    }   sc1.close();
     }
 }
