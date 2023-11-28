@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Number_game {
      
@@ -50,7 +50,9 @@ public class Number_game {
                 break;
             }
             j++;
-        } sc1.close(); 
+        } 
+        sc1.close(); 
+        return;
     }  
 
 }
