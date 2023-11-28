@@ -30,24 +30,27 @@ public class Number_game {
         return 0;
     }
     public static void main(String[] args){
-        int guess = 0, hsc = 0;
+        int guess = 0, hsc = 0, j=0;
         Scanner sc1 = new Scanner(System.in);
-        boolean playagain = true;
-        while (playagain) {
+        while(j<5){
+            
             System.out.println("*".repeat(45));
             System.out.println("\t\tNumber Game");
             System.out.println("*".repeat(45));
             int num = 1 + (int) (Math.random() * 100);
             guess = Guessing_number(num);
-            System.out.println("The original number is: "+num);
+            System.out.println("*".repeat(5)+" The original number is: "+num+" "+"*".repeat(5)+"\n");
             if(guess == 1){
                 hsc = hsc + 100;
             }
-            System.out.println("Your score is: "+ hsc);
-            System.out.print("Ready To play?:(Yes/No)  ");
-            String playagainInput = sc1.nextLine().toLowerCase();
-            playagain = playagainInput.equals("Yes");
-        }   
-        sc1.close();
-    }
+            System.out.println("Your score is: "+hsc+"\n");
+            System.out.print("Ready To play?:(1 for yes/0 for no)  ");
+            int playagain = sc1.nextInt();
+            if(playagain == 0){
+                break;
+            }
+            j++;
+        } sc1.close(); 
+    }  
+
 }
