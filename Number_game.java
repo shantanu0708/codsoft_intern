@@ -32,32 +32,22 @@ public class Number_game {
     public static void main(String[] args){
         int guess = 0, hsc = 0;
         Scanner sc1 = new Scanner(System.in);
-        while(true){
-        System.out.println("Options:\n1.number game\n2.Score\n3.Exit\nEnter the option:");
-        int opt = sc1.nextInt(); 
-        if(opt == 3){
-            break;
-        }
-        switch (opt) {
-            case 1:
-                System.out.println("*".repeat(45));
-                System.out.println("\t\tNumber Game");
-                System.out.println("*".repeat(45));
-                int num = 1 + (int) (Math.random() * 100);
-                guess = Guessing_number(num);
-                System.out.println("The original number is: "+num);
-                if(guess == 1){
-                    hsc = hsc + 100;
-                }
-                break;
-            case 2:
-                System.out.println("Your score is: "+ hsc);
-                break;
-            default:
-                System.out.println("!!!Wrong Option!!!");
-                break;
-        }
-    }   
-    sc1.close();
+        boolean playagain = true;
+        while (playagain) {
+            System.out.println("*".repeat(45));
+            System.out.println("\t\tNumber Game");
+            System.out.println("*".repeat(45));
+            int num = 1 + (int) (Math.random() * 100);
+            guess = Guessing_number(num);
+            System.out.println("The original number is: "+num);
+            if(guess == 1){
+                hsc = hsc + 100;
+            }
+            System.out.println("Your score is: "+ hsc);
+            System.out.print("Ready To play?:(Yes/No)  ");
+            String playagainInput = sc1.nextLine().toLowerCase();
+            playagain = playagainInput.equals("Yes");
+        }   
+        sc1.close();
     }
 }
