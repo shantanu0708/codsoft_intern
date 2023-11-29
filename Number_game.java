@@ -57,5 +57,4 @@ public class Number_game {
         }  sc.close();
         return;
     }  
-
 }
