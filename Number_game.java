@@ -8,6 +8,7 @@ public class Number_game {
             System.out.println("Options:\n1.number game\n2.Score\n3.Exit\nEnter the option:");
             int opt = sc.nextInt(); 
             if(opt == 3){
+                System.out.println("!!Thank you for playing!!");
                 break;
             }
             switch (opt) {
