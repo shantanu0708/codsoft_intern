@@ -34,29 +34,29 @@ class Student {
         return tot_mrk;
     }
     double avg_percentage(){
-        avg_per = tot_mrk / 500;
+        avg_per = tot_mrk / 5;
         return avg_per;
     }
     String grade() {
-         if(avg_per<=1.0 && avg_per>0.9){
+         if(avg_per<=100 && avg_per>90){
             grd = "O";
             return grd;
-         }else if(avg_per<=0.9 && avg_per>0.8){
+         }else if(avg_per<=90 && avg_per>80){
             grd = "A+";
             return grd;
-         }else if(avg_per<=0.8 && avg_per>0.7){
+         }else if(avg_per<=80 && avg_per>70){
             grd = "A";
             return grd;
-         }else if(avg_per<=0.7 && avg_per>0.6){
+         }else if(avg_per<=70 && avg_per>60){
             grd = "B+";
             return grd;
-         }else if(avg_per<=0.6 && avg_per>0.65){
+         }else if(avg_per<=60 && avg_per>65){
             grd = "B";
             return grd;
-         }else if(avg_per<=0.65 && avg_per>0.5){
+         }else if(avg_per<=65 && avg_per>50){
             grd = "C";
             return grd;
-         }else if(avg_per<=0.5 && avg_per>=0.4){
+         }else if(avg_per<=50 && avg_per>=40){
             grd = "Pass";
             return grd;
          }else{
