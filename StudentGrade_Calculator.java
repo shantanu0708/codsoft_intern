@@ -3,10 +3,19 @@ class Student {
     public int phy,che,math,hin,eng;
     public double tot_mrk,avg_per;
     public String grd;
+    public String name,prn,Class;
     Scanner s1 = new Scanner(System.in);
     Student(){
         phy = 0; che = 0; math = 0; 
         hin = 0; eng = 0;
+    }
+    void input_studentinfo(){
+        System.out.println("Student name: ");
+         name = s1.nextLine();
+        System.out.println("Class: ");
+         Class = s1.nextLine();
+        System.out.println("Student Prn: ");
+         prn = s1.next();
     }
     void input_marks(){
         System.out.println("Physics: ");
@@ -55,19 +64,29 @@ class Student {
             return grd;
          }
     }
+    void display(){
+        System.out.println("\n"+"-".repeat(52));
+        System.out.println("NAME: " + name);
+        System.out.println("PRN: " + prn);
+        System.out.println("CLASS: " + Class);
+        System.out.println(" Total Marks: " + tot_marks());
+        System.out.println(" Average percentage: " + avg_percentage());
+        System.out.println("\t\t\t\t\tGrade: " + "\'"+grade()+"\'");
+        System.out.println("-".repeat(52)+"\n");
+    }
 }
 public class StudentGrade_Calculator {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("_".repeat(50)+"\n");
-        System.out.println("\t    Student Grade Calculator");
-        System.out.println("_".repeat(50));
+        System.out.println("_".repeat(55)+"\n");
+        System.out.println("\t\tStudent Grade Calculator");
+        System.out.println("_".repeat(55));
         Student s = new Student();
+        System.out.println("Enter the details of student as follows: ");
+        s.input_studentinfo();
         System.out.println("Enter the marks of given subjects: ");
         s.input_marks();
-        System.out.println("\t\t\t\tTotal Marks: " + s.tot_marks());
-        System.out.println("\t\t\t  Average percentage: " + s.avg_percentage());
-        System.out.println("\t\t\t\t\tGrade: " + "\'"+s.grade()+"\'");
+        s.display();
         sc.close();
     }
 }
