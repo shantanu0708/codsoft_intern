@@ -78,13 +78,13 @@ class Student {
 public class StudentGrade_Calculator {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.println("_".repeat(55)+"\n");
+        System.out.println("\n"+"_".repeat(55)+"\n");
         System.out.println("\t\tStudent Grade Calculator");
         System.out.println("_".repeat(55));
         Student s = new Student();
         System.out.println("Enter the details of student as follows: ");
         s.input_studentinfo();
-        System.out.println("Enter the marks of given subjects: ");
+        System.out.println("\nEnter the marks of given subjects: ");
         s.input_marks();
         s.display();
         sc.close();
