@@ -1,4 +1,6 @@
 import javax.swing.*;
+
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -8,7 +10,7 @@ class ATMInterface1 extends JFrame {
     private double balance = 1000.0;
     public ATMInterface1(){
         setTitle("ATM Interface");
-        setSize(500,300);
+        setSize(800,600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel pan1 = new JPanel();
         add(pan1);
@@ -79,7 +81,7 @@ class ATMInterface1 extends JFrame {
 public class ATMInterface extends JFrame {
     public ATMInterface() {
         setTitle("ATM Machine");
-        setSize(500,400);
+        setSize(1024,768);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JPanel pan = new JPanel();
@@ -91,12 +93,14 @@ public class ATMInterface extends JFrame {
     private void placeComponents(JPanel pan) {
         pan.setLayout(null);
 
-        JLabel atmlabel = new JLabel("Welcome to ATM Interface");
-        atmlabel.setBounds(170, 20, 250, 60);
+        JLabel atmlabel = new JLabel("!!Welcome to ATM Interface!!");
+        atmlabel.setBounds(175, 50, 620, 150);
+        atmlabel.setFont(new Font(("Aerial"),Font.BOLD,45));
         pan.add(atmlabel);
 
         JButton startButton = new JButton("Begin");
-        startButton.setBounds(175,200,140,60);
+        startButton.setBounds(300,300,360,100);
+        startButton.setFont(new Font(("Aerial"),Font.PLAIN,45));
         pan.add(startButton);
 
         startButton.addActionListener( new ActionListener() {
