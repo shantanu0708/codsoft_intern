@@ -3,10 +3,15 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+class UserBank_Acc {
+      public double balance;
+      UserBank_Acc(){
+        balance = 1000.0;
+      }
+}
 class ATMInterface1 extends JFrame {
     private JTextField user;
-    private double balance = 1000.0;
-
+    UserBank_Acc u = new UserBank_Acc();
     public ATMInterface1(){
         setTitle("ATM Interface");
         setLocation(360, 150);
@@ -53,8 +58,8 @@ class ATMInterface1 extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     double amount = Double.parseDouble(user.getText());
-                    if (amount > 0 && amount <= balance) {
-                        balance -= amount;
+                    if (amount > 0 && amount <= u.balance) {
+                        u.balance -= amount;
                         JOptionPane.showMessageDialog(null, "Withdrawn: $" + amount);
                     } else {
                         JOptionPane.showMessageDialog(null, "Invalid amount or insufficient funds.");
@@ -71,7 +76,7 @@ class ATMInterface1 extends JFrame {
                 try {
                     double amount = Double.parseDouble(user.getText());
                     if (amount > 0) {
-                        balance += amount;
+                        u.balance += amount;
                         JOptionPane.showMessageDialog(null, "Deposited: $" + amount);
                     } else {
                         JOptionPane.showMessageDialog(null, "Please enter a valid deposit amount.");
@@ -85,7 +90,7 @@ class ATMInterface1 extends JFrame {
 
         balanceButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Available Balance: "+ balance);
+                JOptionPane.showMessageDialog(null, "Available Balance: "+ u.balance);
             }
         }
         );
