@@ -60,7 +60,7 @@ class ATMInterface1 extends JFrame {
                     double amount = Double.parseDouble(user.getText());
                     if (amount > 0 && amount <= u.balance) {
                         u.balance -= amount;
-                        JOptionPane.showMessageDialog(null, "Withdrawn: $" + amount);
+                        JOptionPane.showMessageDialog(null, "Withdrawn: ₹" + amount);
                     } else {
                         JOptionPane.showMessageDialog(null, "Invalid amount or insufficient funds.");
                     }
@@ -77,7 +77,7 @@ class ATMInterface1 extends JFrame {
                     double amount = Double.parseDouble(user.getText());
                     if (amount > 0) {
                         u.balance += amount;
-                        JOptionPane.showMessageDialog(null, "Deposited: $" + amount);
+                        JOptionPane.showMessageDialog(null, "Deposited: ₹" + amount);
                     } else {
                         JOptionPane.showMessageDialog(null, "Please enter a valid deposit amount.");
                     }
@@ -90,7 +90,7 @@ class ATMInterface1 extends JFrame {
 
         balanceButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "Available Balance: "+ u.balance);
+                JOptionPane.showMessageDialog(null, "Available Balance: ₹"+ u.balance);
             }
         }
         );
