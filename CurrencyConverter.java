@@ -14,11 +14,15 @@ class CurrencyConverter {
         exchangeRates.put("GBP", 0.79);
         exchangeRates.put("JPY", 142.12);
         exchangeRates.put("INR", 83.04);
-
-        System.out.print("Enter source currency (USD, EUR, GBP, JPY, INR): ");
+        exchangeRates.put("KWD", 0.31);
+        exchangeRates.put("IRR", 42262.50);
+        exchangeRates.put("CNY", 7.08);
+        
+        System.out.print("\n Available Currencies : USD, EUR, GBP, JPY, INR, KWD, IRR, CNY \n");
+        System.out.print("Enter source currency: ");
         sourceCurrency = sc.next().toUpperCase();
 
-        System.out.print("\nEnter target currency (USD, EUR, GBP, JPY, INR): ");
+        System.out.print("\nEnter target currency: ");
         targetCurrency = sc.next().toUpperCase();
 
         System.out.print("\nEnter amount to convert: ");
