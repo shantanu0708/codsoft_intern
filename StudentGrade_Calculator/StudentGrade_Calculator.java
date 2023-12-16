@@ -1,3 +1,4 @@
+package StudentGrade_Calculator;
 import java.util.*;
 class Student {
     public int phy,che,math,hin,eng;
