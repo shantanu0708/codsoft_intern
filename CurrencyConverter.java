@@ -18,15 +18,15 @@ class CurrencyConverter {
         System.out.print("Enter source currency (USD, EUR, GBP, JPY, INR): ");
         sourceCurrency = sc.next().toUpperCase();
 
-        System.out.print("Enter target currency (USD, EUR, GBP, JPY, INR): ");
+        System.out.print("\nEnter target currency (USD, EUR, GBP, JPY, INR): ");
         targetCurrency = sc.next().toUpperCase();
 
-        System.out.print("Enter amount to convert: ");
+        System.out.print("\nEnter amount to convert: ");
         amount = sc.nextDouble();
 
         convertedAmt = convertCurrency(amount, exchangeRates.get(targetCurrency) / exchangeRates.get(sourceCurrency));
 
-        System.out.println("Converted amount: " + convertedAmt + " " + targetCurrency);
+        System.out.println("\n\tConverted amount: " + convertedAmt + " " + targetCurrency + "\n");
         sc.close();
     }
     private static double convertCurrency(double amt, double exchangeRate) {
